@@ -169,7 +169,7 @@ public class Methods {
         teslim = LocalDate.of(Integer.parseInt(alisTarih.getTeslimYil()),
                 Integer.parseInt(alisTarih.getTeslimAy()),
                 Integer.parseInt(alisTarih.getTeslimGun()));
-        if (teslim.isBefore(ChronoLocalDate.from(LocalDateTime.now()))) {
+        if (teslim.isBefore(ChronoLocalDate.from(LocalDateTime.now()))||teslim.isBefore(alis)) {
             System.out.println("Lutfen gecerli tarih giriniz");
             teslimTarih();
         }
