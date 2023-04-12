@@ -76,7 +76,7 @@ public class Methods {
             System.out.println("Lutfen gecerli yil giriniz");
             alisYil();
         }
-        if (!(Integer.parseInt(alisTarih.alisYil) >= 2023)) {
+        if (!(Integer.parseInt(alisTarih.alisYil) >= LocalDate.now().getDayOfYear())) {
             System.out.println("Lutfen gecerli yil giriniz");
             alisYil();
         }
@@ -133,7 +133,7 @@ public class Methods {
             System.out.println("Lutfen gecerli gun giriniz");
             alisGun();
         }
-        if ((Integer.parseInt(alisTarih.alisGun) > 32) && (Integer.parseInt(alisTarih.alisGun) <= 0)) {
+        if ((Integer.parseInt(alisTarih.alisGun) > 31) && (Integer.parseInt(alisTarih.alisGun) <= 0)) {
             System.out.println("Lutfen gecerli gun giriniz");
             alisGun();
         }
